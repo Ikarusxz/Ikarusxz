@@ -1,0 +1,20 @@
+Proceso CalcularPagoCapitan
+		Definir nombre_capitan Como Cadena
+		Definir sueldo_basico, bono, descuento_imposiciones, descuento_seguro_vida, sueldo_total Como Real
+		
+		// Inicializar valores
+		sueldo_basico <- 800000
+		bono <- 0.15 * sueldo_basico
+		descuento_imposiciones <- 0.02 * sueldo_basico
+		descuento_seguro_vida <- 0.03 * sueldo_basico
+		
+		// Leer el nombre del capitán
+		Escribir "Ingrese el nombre del capitán: "
+		Leer nombre_capitan
+		
+		// Calcular el sueldo total a pagar
+		sueldo_total <- sueldo_basico + bono - descuento_imposiciones - descuento_seguro_vida
+		
+		// Mostrar el resultado
+		Escribir "El pago total semanal para el capitán ", nombre_capitan, " es: ", sueldo_total, " CLP"
+FinProceso
