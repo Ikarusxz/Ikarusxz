@@ -1,0 +1,47 @@
+Proceso CalcularEdadPasajeros
+		Definir cantidad_pasajeros, edad, suma_edades_mayores, suma_edades_menores, cantidad_mayores, cantidad_menores Como Entero
+		Definir promedio_mayores, promedio_menores Como Real
+		
+		// Inicializar variables
+		suma_edades_mayores <- 0
+		suma_edades_menores <- 0
+		cantidad_mayores <- 0
+		cantidad_menores <- 0
+		
+		// Leer la cantidad de pasajeros
+		Escribir "Ingrese la cantidad de pasajeros: "
+		Leer cantidad_pasajeros
+		
+		// Leer edades de los pasajeros y clasificarlos
+		Para i <- 1 Hasta cantidad_pasajeros Con Paso 1 Hacer
+			Escribir "Ingrese la edad del pasajero ", i, ":"
+			Leer edad
+			
+			Si edad >= 18 Entonces
+				cantidad_mayores <- cantidad_mayores + 1
+				suma_edades_mayores <- suma_edades_mayores + edad
+			SiNo
+				cantidad_menores <- cantidad_menores + 1
+				suma_edades_menores <- suma_edades_menores + edad
+			FinSi
+		FinPara
+		
+		// Calcular promedios
+		Si cantidad_mayores > 0 Entonces
+			promedio_mayores <- suma_edades_mayores / cantidad_mayores
+		SiNo
+			promedio_mayores <- 0
+		FinSi
+		
+		Si cantidad_menores > 0 Entonces
+			promedio_menores <- suma_edades_menores / cantidad_menores
+		SiNo
+			promedio_menores <- 0
+		FinSi
+		
+		// Mostrar resultados
+		Escribir "Cantidad de pasajeros mayores de edad: ", cantidad_mayores
+		Escribir "Cantidad de pasajeros menores de edad: ", cantidad_menores
+		Escribir "Promedio de edad de los pasajeros mayores de edad: ", promedio_mayores
+		Escribir "Promedio de edad de los pasajeros menores de edad: ", promedio_menores
+FinProceso
