@@ -1,58 +1,22 @@
 <?php
-// Ejemplo en PHP que distingue variables escalares y compuestas
+// Ejemplo de variables escalares
+$nombre = "Juan"; // Cadena (string)
+$edad = 30; // Entero (int)
+$precio = 49.99; // Punto flotante (float)
+$es_cliente_nuevo = true; // Booleano (bool)
 
-// Variables escalares: 
-// Son variables que contienen un solo valor. 
-// Tipos de datos: entero, flotante, cadena, booleano
+// Ejemplo de variable compuesta (arreglo)
+$productos = ["Laptop", "Mouse", "Teclado"]; // Arreglo (array)
 
-// Variable escalar de tipo entero
-$numero_de_productos = 5; // Cantidad de productos comprados
+// Imprimimos los valores
+echo "Nombre: $nombre\n";
+echo "Edad: $edad\n";
+echo "Precio: $precio\n";
+echo "¿Es cliente nuevo?: " . ($es_cliente_nuevo ? "Sí" : "No") . "\n";
 
-// Variable escalar de tipo flotante
-$precio_unitario = 199.99; // Precio de cada producto
-
-// Variable escalar de tipo cadena
-$nombre_cliente = "Juan Pérez"; // Nombre del cliente
-
-// Variable escalar de tipo booleano
-$es_miembro = true; // Indica si el cliente es miembro (true) o no (false)
-
-
-// Variables compuestas: 
-// Son variables que pueden contener múltiples valores o estructuras complejas. 
-// Tipos de datos: array, objeto
-
-// Variable compuesta de tipo array
-$lista_de_productos = array("Laptop", "Mouse", "Teclado"); // Lista de productos comprados
-
-// Acceder a elementos del array
-echo "Producto 1: " . $lista_de_productos[0] . "\n"; // Accede al primer producto de la lista
-
-// Variable compuesta de tipo array asociativo
-$detalles_cliente = array(
-    "nombre" => "Juan Pérez",
-    "direccion" => "Calle Falsa 123",
-    "correo" => "juan.perez@example.com"
-);
-
-// Acceder a valores del array asociativo
-echo "Nombre del cliente: " . $detalles_cliente["nombre"] . "\n"; // Muestra el nombre del cliente
-
-// Variable compuesta de tipo objeto
-class Producto {
-    public $nombre;
-    public $precio;
-    
-    function __construct($nombre, $precio) {
-        $this->nombre = $nombre;
-        $this->precio = $precio;
-    }
+// Imprimimos los productos
+echo "Productos:\n";
+foreach ($productos as $producto) {
+    echo "- $producto\n";
 }
-
-// Crear una instancia de la clase Producto
-$producto1 = new Producto("Laptop", 999.99);
-
-// Acceder a las propiedades del objeto
-echo "Producto: " . $producto1->nombre . "\n"; // Muestra el nombre del producto
-echo "Precio: $" . $producto1->precio . "\n";  // Muestra el precio del producto
 ?>
